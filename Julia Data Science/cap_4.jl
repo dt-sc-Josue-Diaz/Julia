@@ -55,7 +55,9 @@ value_alice()
 
 # ╔═╡ a4386674-bfec-4fcf-9882-7175849e912c
 names = ["Sally", "Bob", "Alice", "Hank"]
-grades = [1,5,8.5,4]
+
+# ╔═╡ c9aeffc1-efb1-4b46-87d3-cc1f30193ba0
+
 
 # ╔═╡ b7a7298c-2110-46ef-af23-193eb0172a08
 grades = [1,5,8.5,4]
@@ -184,13 +186,52 @@ write("my_data.csv", my_data)
 data_frame_2 = CSV.read("my_data.csv",DataFrame)
 
 # ╔═╡ 5ef63275-9afc-4b09-9c82-198696fcb3d6
+## index and summarize
+
+# ╔═╡ 940ae30f-ca85-4fb4-ae61-63cae867d212
+grades_2020()
+
+# ╔═╡ 9965ccd5-8650-407b-af1e-40933f6b6450
+function names_grades1()
+	df = grades_2020()
+	df.name
+end
+
+# ╔═╡ 82cdf9d5-bb24-4966-b6ff-8fdda1539fa8
+names_grades1()
+
+# ╔═╡ beb38366-c3d5-4536-9699-f5b880723e5d
+function names_grades2()
+	df = grades_2020()
+	df[!, :name]
+end
+
+# ╔═╡ 3ca8049f-8dd0-4069-8ab8-8d9e15a99660
 
 
 # ╔═╡ 904cf40a-c1ea-4b6f-8acd-706b49e89524
+names_grades2()
+
+# ╔═╡ 311bfe7c-7465-450e-b6be-d15de8ad03d1
+Datos = grades_2020()
+
+# ╔═╡ 4c4bc258-2431-425b-813b-af14a95a1ab3
+Datos[2, : ]
+
+# ╔═╡ 76c4145a-1273-4448-943d-2d97ed7cc5b7
+
+
+# ╔═╡ 83876a8d-1940-4ff2-891f-253805ae341b
+
+
+# ╔═╡ 7b1d7531-b996-456f-a990-3c83646dda2d
+
+
+# ╔═╡ bdf4a58e-357e-4a19-8444-16a6ad09f860
 
 
 # ╔═╡ ba9270d0-6660-41b7-8a24-35e5e3f7162b
-
+df[2, :]
 
 # ╔═╡ 5fdf0707-724f-48aa-9298-94291d87a1f3
 
@@ -601,6 +642,7 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╠═f7b87852-38ee-4bfe-a96e-106017d8ed93
 # ╠═628d0de0-e98b-11ec-2b32-4d6d0a0e1d22
 # ╠═a4386674-bfec-4fcf-9882-7175849e912c
+# ╠═c9aeffc1-efb1-4b46-87d3-cc1f30193ba0
 # ╠═b7a7298c-2110-46ef-af23-193eb0172a08
 # ╠═8cccab58-4cd9-4b88-84a5-d0385625f9e1
 # ╠═2983972a-fe48-4374-8c11-18da5608c04d
@@ -636,7 +678,18 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 # ╠═51b02e1f-6460-481c-9ede-adcab2b99a5d
 # ╠═a3cbc714-abe1-423f-b2e7-e048019f9e35
 # ╠═5ef63275-9afc-4b09-9c82-198696fcb3d6
+# ╠═940ae30f-ca85-4fb4-ae61-63cae867d212
+# ╠═9965ccd5-8650-407b-af1e-40933f6b6450
+# ╠═82cdf9d5-bb24-4966-b6ff-8fdda1539fa8
+# ╠═beb38366-c3d5-4536-9699-f5b880723e5d
+# ╠═3ca8049f-8dd0-4069-8ab8-8d9e15a99660
 # ╠═904cf40a-c1ea-4b6f-8acd-706b49e89524
+# ╠═311bfe7c-7465-450e-b6be-d15de8ad03d1
+# ╠═4c4bc258-2431-425b-813b-af14a95a1ab3
+# ╠═76c4145a-1273-4448-943d-2d97ed7cc5b7
+# ╠═83876a8d-1940-4ff2-891f-253805ae341b
+# ╠═7b1d7531-b996-456f-a990-3c83646dda2d
+# ╠═bdf4a58e-357e-4a19-8444-16a6ad09f860
 # ╠═ba9270d0-6660-41b7-8a24-35e5e3f7162b
 # ╠═5fdf0707-724f-48aa-9298-94291d87a1f3
 # ╠═75cb15c3-47cd-441a-9766-e30db420a705
